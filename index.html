@@ -2,6 +2,21 @@
 <html>
 <head>
     <title>私の初めてのホームページ</title>
+    <style>
+        body {
+            /* ページの左右の余白をなくす（ブラウザによっては必要） */
+            margin: 0;
+            padding: 0;
+        }
+        #main-image {
+            /* 画像を要素の幅に合わせて表示 */
+            width: 100%; 
+            /* 画像の高さを自動で調整 */
+            height: auto; 
+            /* 画像が親要素から飛び出さないように */
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <img src="gaikan.jpg" alt="お店の外観写真" id="main-image"> 
