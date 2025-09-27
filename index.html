@@ -8,12 +8,15 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: sans-serif; 
+            font-family: sans-serif;
+            /* ★追加: アニメーションの基準位置を設定（main-imageの上に重ねるため） */
+            position: relative; 
+            overflow-x: hidden; /* 横スクロールバーが出ないように隠す */
         }
 
         /* ページトップの大きな画像（gaikan.jpg） */
         #main-image {
-            width: 100%; 
+            width: 100%;  
             height: auto; 
             display: block;
         }
@@ -47,6 +50,37 @@
             padding: 0 20px;
             text-align: center;
         }
+
+        /* --- ここから追加するCSSです --- */
+
+        /* スライドさせる画像（str.jpg）の設定 */
+        #sliding-image {
+            /* 画像をmain-imageの上に重ねるための設定 */
+            position: absolute;
+            top: 0; /* main-imageの上端に配置 */
+            left: -100%; /* 初期位置：画面の左端の外側（見えない場所） */
+
+            /* 画像のサイズと透明度 */
+            width: 300px; /* スライドさせる画像の幅 (任意で調整してください) */
+            height: auto;
+            opacity: 0.8; /* 多少透明にして下の画像が見えるように (任意で調整してください) */
+
+            /* アニメーションの適用 */
+            animation: slideRight 5s linear infinite; /* アニメーション名, 速度, 繰り返し */
+        }
+
+        /* アニメーションの定義：左端の外から右端の外まで動かす */
+        @keyframes slideRight {
+            0% {
+                transform: translateX(0); /* アニメーション開始時 */
+            }
+            100% {
+                /* 画面幅の200%分、右に移動させて画面を横切らせます */
+                transform: translateX(200vw); 
+            }
+        }
+        
+        /* --- ここまで追加するCSSです --- */
     </style>
 </head>
 <body>
@@ -54,8 +88,6 @@
     <img src="gaikan.jpg" alt="お店の外観写真" id="main-image"> 
 
     <img src="str.jpg" alt="スライドする画像" id="sliding-image">
-    <h1>工事中</h1>
-    <p>少しづつ更新します</p>
 
     <h1>工事中</h1>
     <p>少しづつ更新します</p>
