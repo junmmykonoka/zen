@@ -4,7 +4,7 @@
     <title>ぜん</title>
     
     <style>
-        /* 全体の設定（ブラウザのデフォルト余白をリセット） */
+        /* 全体の設定 */
         body {
             margin: 0;
             padding: 0;
@@ -13,7 +13,7 @@
             overflow-x: hidden; 
         }
 
-        /* ページトップの大きな画像（gaikan.jpg） */
+        /* ページトップの大きな画像 */
         #main-image {
             width: 100%;  
             height: auto; 
@@ -33,7 +33,7 @@
         .gallery-item {
             width: 31%; 
             box-sizing: border-box; 
-            text-align: center; /* ★追加: コメントを中央寄せにする */
+            text-align: center; 
         }
 
         /* 画像そのものの設定 */
@@ -47,7 +47,7 @@
 
         /* ギャラリー内のコメントのスタイル */
         .gallery-caption {
-            margin-top: 10px; /* 画像との間に少し隙間を作る */
+            margin-top: 10px; 
             font-size: 14px;
             color: #333;
         }
@@ -66,11 +66,13 @@
             top: 0; 
             left: -100%; 
 
-            width: 600px; 
+            /* ★修正: 画像サイズを300pxに戻しました */
+            width: 1200px; 
             height: auto;
             opacity: 0.8; 
 
-            animation: slideRight 20s linear infinite; 
+            /* 速度は20秒のまま */
+            animation: slideRight 100s linear infinite; 
         }
 
         /* アニメーションの定義 */
