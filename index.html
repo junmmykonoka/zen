@@ -33,6 +33,7 @@
         .gallery-item {
             width: 31%; 
             box-sizing: border-box; 
+            text-align: center; /* ★追加: コメントを中央寄せにする */
         }
 
         /* 画像そのものの設定 */
@@ -42,6 +43,13 @@
             display: block;
             border-radius: 5px; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* ギャラリー内のコメントのスタイル */
+        .gallery-caption {
+            margin-top: 10px; /* 画像との間に少し隙間を作る */
+            font-size: 14px;
+            color: #333;
         }
         
         /* 見出しと段落の設定 */
@@ -58,13 +66,11 @@
             top: 0; 
             left: -100%; 
 
-            /* ★修正点1: 画像サイズを2倍に変更 (300px -> 600px) */
-            width: 1200px; 
+            width: 600px; 
             height: auto;
             opacity: 0.8; 
 
-            /* ★修正点2: スピードを1/4に変更 (5s -> 20s) */
-            animation: slideRight 100s linear infinite; 
+            animation: slideRight 20s linear infinite; 
         }
 
         /* アニメーションの定義 */
@@ -90,12 +96,15 @@
     <div class="gallery-container">
         <div class="gallery-item">
             <img src="tennai-a.jpg" alt="最高刺身盛り">
+            <p class="gallery-caption">最高刺身盛り</p> 
         </div>
         <div class="gallery-item">
             <img src="tennai-b.jpg" alt="旬の秋刀魚">
+            <p class="gallery-caption">旬の秋刀魚</p>
         </div>
         <div class="gallery-item">
             <img src="tennai-c.jpg" alt="男は黙ってキリンラガー">
+            <p class="gallery-caption">男は黙ってキリンラガー</p>
         </div>
     </div>
     
